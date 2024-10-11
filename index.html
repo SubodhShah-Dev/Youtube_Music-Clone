@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yt-music Clone</title>
+    <link rel="stylesheet" href="./src/main.css" />
+  </head>
+
+  <body
+    class="font-[Roboto, Noto Naskh Arabic UI, Arial, sans-serif;] relative -z-20 bg-[#030303] text-white"
+  >
+    <!-- Top Starts -->
+    <header class="navBar sticky top-0 h-[64px] bg-[#030303]">
+      <!-- NavBar Starts -->
+      <div class="navContainer mr-4 flex h-[100%] items-center justify-between">
+        <div
+          class="navLeft flex h-[100%] items-center justify-between md:w-[100%] lg:w-[100%]"
+        >
+          <div
+            class="logoBox mr-[8ppx] flex items-center justify-between md:hidden lg:hidden"
+          >
+            <div
+              id="hamburgerIcon"
+              class="hamburgerIcon ml-[16px] cursor-pointer p-[10px]"
+            >
+              <img src="./svg/hambar.svg" alt="Menu" />
+            </div>
+            <div class="px-[10px]"><img src="./svg/logo.svg" alt="Logo" /></div>
+          </div>
+          <div
+            class="searchBox hidden h-[60%] w-[100%] items-center rounded-md bg-[#393a32] focus-within:bg-[#030303] md:ml-[35%] md:flex md:w-[55%] lg:ml-[27%] lg:w-[40%]"
+          >
+            <div class="cursor-pointer p-3">
+              <img src="./svg/search.svg" alt="SearchBtn" />
+            </div>
+            <div class="flex h-[100%] w-[100%] items-center pr-3">
+              <input
+                class="lg:w[50%] h-[98%] w-[98%] bg-[#393a32] pb-1 text-white outline-none focus:bg-[#030303]"
+                type="text"
+                placeholder="Search songs, albums, artists, podcasts"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="navRight flex items-center justify-between">
+          <div class="cursor-pointer md:hidden">
+            <img src="./svg/search.svg" alt="Search Button" />
+          </div>
+          <button title="Login" type="button" class="px-[20px] md:px-6">
+            <img src="./svg/profile.svg" alt="Profile" />
+          </button>
+        </div>
+      </div>
+      <!-- NavBar Ends -->
+
+      <!-- SideMenu Starts-->
+      <div
+        id="sideMenu"
+        class="sideMenu fixed left-[-1000px] top-3 h-[100%] min-w-[200px] bg-[#030303] transition-transform md:left-0 md:w-[20%] md:border-r-[1px] md:border-r-gray-500"
+      >
+        <div class="sideMenuTop mx-[3px] flex items-center pt-[10px]">
+          <div
+            class="crossIcon ml-[16px] cursor-pointer p-[10px] md:hidden lg:hidden"
+          >
+            <img src="./svg/cross.svg" alt="Close Button" />
+          </div>
+          <div class="px-[10px] md:m-auto">
+            <img src="./svg/logo.svg" alt="Logo" />
+          </div>
+        </div>
+        <div class="menuList">
+          <div
+            class="listWrapper my-[16px] flex w-[100%] flex-col items-center justify-center py-2 pl-[20px] font-sans text-[16px] font-semibold text-white md:px-[7px] lg:px-[7px]"
+          >
+            <a
+              href=""
+              class="mb-[10px] flex w-[100%] cursor-pointer items-center justify-start gap-5 p-[10px] hover:bg-[#1d1d1d]"
+              ><div>
+                <img src="./svg/home.svg" alt="Home" />
+              </div>
+              <div>Home</div></a
+            >
+
+            <a
+              class="mb-[10px] flex w-[100%] cursor-pointer items-center justify-start gap-5 p-[10px] hover:bg-[#1d1d1d]"
+            >
+              <div>
+                <img src="./svg/explore.svg" alt="Explore" />
+              </div>
+              <div>Explore</div>
+            </a>
+            <a
+              class="mb-[10px] flex w-[100%] cursor-pointer items-center justify-start gap-5 p-[10px] hover:bg-[#1d1d1d]"
+            >
+              <div>
+                <img src="./svg/library.svg" alt="Library" />
+              </div>
+              <div>Library</div>
+            </a>
+            <a
+              class="mb-[10px] flex w-[100%] cursor-pointer items-center justify-start gap-5 p-[10px] hover:bg-[#1d1d1d]"
+            >
+              <div>
+                <img src="./svg/upgrade.svg" alt="Upgrade" />
+              </div>
+              <div>Upgrade</div>
+            </a>
+          </div>
+        </div>
+        <div class="sideMenuBottom flex w-[100%] flex-col p-[7px] text-white">
+          <div
+            class="m-auto flex w-[80%] cursor-pointer items-center justify-center rounded-xl bg-[#1d1d1d] py-[7px]"
+          >
+            <div><img src="./svg/plus.svg" alt="New Playlist" /></div>
+            <a href="">New Playlists</a>
+          </div>
+          <div class="relative p-[10px] font-sans text-[13px] font-bold">
+            <div
+              class="sideMenuButtomInfo mt-[20px] flex flex-col justify-center rounded-md p-[7px] hover:bg-[#1d1d1d]"
+            >
+              <div class="flex cursor-pointer items-center">
+                <div>
+                  <h4>Liked Music</h4>
+                  <p class="text-[10px] font-light">Auto Playlist</p>
+                </div>
+                <div
+                  class="sideMenuPlayBtn absolute right-[20px] hidden rounded-[100%] bg-white"
+                >
+                  <img src="./svg/play.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="sideMenuButtomInfo mt-[16px] flex flex-col justify-center rounded-md p-[7px] hover:bg-[#1d1d1d]"
+            >
+              <div class="flex cursor-pointer items-center">
+                <div>
+                  <h4>Episodes for later</h4>
+                  <p class="text-[10px] font-light">Auto Playlist</p>
+                </div>
+                <div
+                  class="sideMenuPlayBtn absolute right-[20px] hidden rounded-[100%] bg-white"
+                >
+                  <img src="./svg/play.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SidedMenu Ends -->
+    </header>
+    <!-- Top Ends -->
+
+    <!-- Capsules Starts -->
+    <section
+      class="capsules scroll- scrollbar-thin my-[25px] flex h-[64px] items-center overflow-x-auto bg-[#030303] text-white md:ml-[32%] lg:ml-[25%]"
+    >
+      <div class="h-[100%] p-[7px]">
+        <button
+          type="button"
+          title="Music Genre"
+          class="min-w-[85px] rounded-xl bg-[#1d1d1d] p-[7px] hover:bg-[#393a32]"
+        >
+          Energize
+        </button>
+      </div>
+      <div class="h-[100%] p-[7px]">
+        <button
+          type="button"
+          title="Music Genre"
+          class="min-w-[85px] rounded-xl bg-[#1d1d1d] p-[7px] hover:bg-[#393a32]"
+        >
+          Feel good
+        </button>
+      </div>
+      <div class="h-[100%] p-[7px]">
+        <button
+          type="button"
+          title="Music Genre"
+          class="min-w-[85px] rounded-xl bg-[#1d1d1d] p-[7px] hover:bg-[#393a32]"
+        >
+          Relax
+        </button>
+      </div>
+      <div class="h-[100%] p-[7px]">
+        <button
+          type="button"
+          title="Music Genre"
+          class="min-w-[85px] rounded-xl bg-[#1d1d1d] p-[7px] hover:bg-[#393a32]"
+        >
+          Workout
+        </button>
+      </div>
+      <div class="h-[100%] p-[7px]">
+        <button
+          type="button"
+          title="Music Genre"
+          class="min-w-[85px] rounded-xl bg-[#1d1d1d] p-[7px] hover:bg-[#393a32]"
+        >
+          Energize
+        </button>
+      </div>
+      <div class="h-[100%] p-[7px]">
+        <button
+          type="button"
+          title="Music Genre"
+          class="min-w-[85px] rounded-xl bg-[#1d1d1d] p-[7px] hover:bg-[#393a32]"
+        >
+          Feel good
+        </button>
+      </div>
+      <div class="h-[100%] p-[7px]">
+        <button
+          type="button"
+          title="Music Genre"
+          class="min-w-[85px] rounded-xl bg-[#1d1d1d] p-[7px] hover:bg-[#393a32]"
+        >
+          Relax
+        </button>
+      </div>
+      <div class="h-[100%] p-[7px]">
+        <button
+          type="button"
+          title="Music Genre"
+          class="min-w-[85px] rounded-xl bg-[#1d1d1d] p-[7px] hover:bg-[#393a32]"
+        >
+          Workout
+        </button>
+      </div>
+    </section>
+    <!-- Capsules Ends -->
+
+    <!-- Music starts -->
+    <main class="mainSection relative -z-10 text-white md:ml-[32%] lg:ml-[25%]">
+      <div class="carouselShelf px-[7px] md:px-0">
+        <header class="my-[10px] flex h-[50px] w-[100%] items-center py-[7px]">
+          <div class="flex w-[85%] items-center justify-between">
+            <h1 class="text-[25px] font-bold">Quick Picks</h1>
+            <button
+              type="button"
+              class="rounded-xl border-[1px] px-[10px] py-[2px] text-[14px] font-semibold hover:bg-[#393a32]"
+            >
+              Play all
+            </button>
+          </div>
+          <div class="flex w-[15%] items-center justify-center">
+            <button title="Previous" type="button">
+              <img src="./svg/chevronleft.svg" alt="Previous Button" />
+            </button>
+            <button title="Next" type="button">
+              <img src="./svg/chevronright.svg" alt="Next Button" />
+            </button>
+          </div>
+        </header>
+        <div class="songsWrapper mt-[20px] h-[85%] md:h-[100%]">
+          <div
+            class="songsGrid scrollbar-thin h-[100%] w-full overflow-x-auto overflow-y-hidden whitespace-nowrap"
+          >
+            <div class="inline-block w-[50%]">
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block w-[50%]">
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="inline-block w-[50%]">
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+              <div class="cardContainer">
+                <div
+                  class="songCard relative mb-[13px] flex w-[100%] items-center justify-between rounded-md p-[7px] hover:bg-[#1d1d1d] md:mb-[13px]"
+                >
+                  <div class="flex items-center gap-[7px]">
+                    <div>
+                      <img
+                        class="max-w-[40px]"
+                        src="${songsImages[index]}"
+                        alt="Song Image"
+                      />
+                    </div>
+                    <div>
+                      <a
+                        class="text-[10px] font-bold md:text-[13px]"
+                        href="${songsPaths[index]}"
+                        >${songsNames[index]}</a
+                      >
+                      <div class="text-[8px] font-light md:text-[13px]">
+                        <span
+                          ><a
+                            class="hover:decoration-white hover:decoration-dashed"
+                            href="${songsPaths[index]}"
+                            >Subodh shah</a
+                          >
+                          - 300k views</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="iconsContainer hidden w-[25%] justify-around">
+                    <button
+                      type="button"
+                      title="LikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/likeBtn.svg" alt="Like Button" />
+                    </button>
+                    <button
+                      type="button"
+                      title="DisLikeBtn"
+                      class="rounded-xl p-[7px] hover:bg-[#393a32]"
+                    >
+                      <img src="/svg/dislikeBtn.svg" alt="Dislike Button" />
+                    </button>
+
+                    <button
+                      class="hidden rounded-xl p-[3px] hover:bg-[#393a32] lg:block"
+                      type="button"
+                      title="Options"
+                    >
+                      <img src="/svg/threedots.svg" alt="Options" />
+                    </button>
+                  </div>
+                  <button
+                    type="button"
+                    title="Play Button"
+                    class="cardSongPlaybtn absolute left-[17px] hidden"
+                  >
+                    <img src="/svg/cardPlay.svg" alt="Play button" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Music Ends -->
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
