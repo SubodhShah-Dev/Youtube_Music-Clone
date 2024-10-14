@@ -233,7 +233,7 @@ function sideMenuToggle() {
   });
 }
 
-// Show or hide play button on hover
+// Show or hide sideMenu play button on hover
 function playButtonToggle() {
   const sideMenuInfo = document.querySelectorAll(".sideMenuButtomInfo");
   const sideMenuPlayBtn = document.querySelectorAll(".sideMenuPlayBtn");
