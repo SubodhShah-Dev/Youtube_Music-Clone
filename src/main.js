@@ -115,7 +115,7 @@ function cardFiller(songsNames, songsPaths, songsImages) {
     const likeBtn = song.querySelector(".likeBtn");
     const dislikeBtn = song.querySelector(".dislikeBtn");
 
-    likeBtn.addEventListener("click", () => {
+    likeBtn.parentElement.addEventListener("click", () => {
       if (likeBtn.getAttribute("fill") === "black") {
         likeBtn.setAttribute("fill", "white");
         dislikeBtn.setAttribute("fill", "black");
@@ -128,7 +128,7 @@ function cardFiller(songsNames, songsPaths, songsImages) {
       }
     });
 
-    dislikeBtn.addEventListener("click", () => {
+    dislikeBtn.parentElement.addEventListener("click", () => {
       if (dislikeBtn.getAttribute("fill") === "black") {
         dislikeBtn.setAttribute("fill", "white");
         likeBtn.setAttribute("fill", "black");
