@@ -80,7 +80,7 @@ function cardFiller(songsNames, songsPaths, songsImages) {
           </div>
         </div>
       </div>
-      <div class="iconsContainer hidden min-w-[50px] md:w-[25%] justify-center md:justify-around">
+      <div class="iconsContainer hidden w-[25%] justify-center md:justify-around">
         <button
                       type="button"
                       title="LikeBtn"
