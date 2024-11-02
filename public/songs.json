@@ -1,0 +1,53 @@
+{
+  "title": "Songs",
+  "list": [
+    {
+      "name": "songOne",
+      "path": "/songs/songOne.mp3"
+    },
+    {
+      "name": "songTwo",
+      "path": "/songs/songTwo.mp3"
+    },
+    {
+      "name": "songThree",
+      "path": "/songs/songThree.mp3"
+    },
+    {
+      "name": "songFour",
+      "path": "/songs/songFour.mp3"
+    },
+    {
+      "name": "songFive",
+      "path": "/songs/songFive.mp3"
+    },
+    {
+      "name": "songSix",
+      "path": "/songs/songSix.mp3"
+    },
+    {
+      "name": "songSeven",
+      "path": "/songs/songSeven.mp3"
+    },
+    {
+      "name": "songEight",
+      "path": "/songs/songEight.mp3"
+    },
+    {
+      "name": "songNine",
+      "path": "/songs/songNine.mp3"
+    },
+    {
+      "name": "songTen",
+      "path": "/songs/songTen.mp3"
+    },
+    {
+      "name": "songOne",
+      "path": "/songs/songOne.mp3"
+    },
+    {
+      "name": "songTwo",
+      "path": "/songs/songTwo.mp3"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Images",
+  "list": [
+    {
+      "name": "imageOne",
+      "path": "/images/imageOne.webp"
+    },
+    {
+      "name": "imageTwo",
+      "path": "/images/imageTwo.webp"
+    },
+    {
+      "name": "imageThree",
+      "path": "/images/imageThree.webp"
+    },
+    {
+      "name": "imageFour",
+      "path": "/images/imageFour.webp"
+    },
+    {
+      "name": "imageFive",
+      "path": "/images/imageFive.webp"
+    },
+    {
+      "name": "imageSix",
+      "path": "/images/imageSix.webp"
+    },
+    {
+      "name": "imageSeven",
+      "path": "/images/imageSeven.webp"
+    },
+    {
+      "name": "imageEight",
+      "path": "/images/imageEight.webp"
+    },
+    {
+      "name": "imageNine",
+      "path": "/images/imageNine.webp"
+    },
+    {
+      "name": "imageTen",
+      "path": "/images/imageTen.webp"
+    },
+    {
+      "name": "imageOne",
+      "path": "/images/imageOne.webp"
+    },
+    {
+      "name": "imageTwo",
+      "path": "/images/imageTwo.webp"
+    }
+  ]
+}
